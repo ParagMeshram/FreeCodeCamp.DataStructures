@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicArray", "DynamicArray\DynamicArray.csproj", "{DE838C10-7FFE-4E08-84D5-45D1D1D2D2DB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Arrays", "01 - Arrays", "{753896BC-7CA4-4447-9C52-C4350DC1FC73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE838C10-7FFE-4E08-84D5-45D1D1D2D2DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE838C10-7FFE-4E08-84D5-45D1D1D2D2DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE838C10-7FFE-4E08-84D5-45D1D1D2D2DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE838C10-7FFE-4E08-84D5-45D1D1D2D2DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DE838C10-7FFE-4E08-84D5-45D1D1D2D2DB} = {753896BC-7CA4-4447-9C52-C4350DC1FC73}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E4D94F4-E6AF-4D96-B1FC-5F1CE0080C4A}
+	EndGlobalSection
+EndGlobal
