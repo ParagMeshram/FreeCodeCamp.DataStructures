@@ -63,6 +63,24 @@
             return item;
         }
 
+        public int IndexOf(T item)
+        {
+            if (item == null) throw new ArgumentNullException($"Parameter {nameof(item)} can not be null");
+
+            if (this.items == null) return -1;
+
+            for (var index = 0; index < this.Count; index++)
+                if (item.Equals(this.items[index]))
+                    return index;
+
+            return -1;
+        }
+
+        public bool Contains(T item)
+        {
+            return IndexOf(item) != -1;
+        }
+
         public void Clear()
         {
             this.items = new T[this.Capacity];
@@ -80,7 +98,7 @@
                 this.array = array;
             }
 
-            public T Current => this.array[position];
+            public T Current => this.array[this.position];
 
             object IEnumerator.Current => this.Current;
 
@@ -92,7 +110,7 @@
             public bool MoveNext()
             {
                 this.position++;
-                return (this.position < array.Count);
+                return this.position < this.array.Count;
             }
 
             public void Reset()
