@@ -29,7 +29,7 @@
 
         public IEnumerator<T> GetEnumerator()
         {
-            return new Enumerator(this.items, this.Count);
+            return new Enumerator(this);
         }
 
         IEnumerator IEnumerable.GetEnumerator()
@@ -72,31 +72,32 @@
 
         private class Enumerator : IEnumerator<T>
         {
-            private readonly T[] items;
-            private int current = -1;
+            private Array<T> array;
+            private int position = -1;
 
-            public Enumerator(T[] items, int count)
+            public Enumerator(Array<T> array)
             {
-                this.items = items;
+                this.array = array;
             }
 
-            public T Current => throw new NotImplementedException();
+            public T Current => this.array[position];
 
-            object IEnumerator.Current => throw new NotImplementedException();
+            object IEnumerator.Current => this.Current;
 
             public void Dispose()
             {
-                throw new NotImplementedException();
+                this.array = null;
             }
 
             public bool MoveNext()
             {
-                throw new NotImplementedException();
+                this.position++;
+                return (this.position < array.Count);
             }
 
             public void Reset()
             {
-                this.current = -1;
+                this.position = -1;
             }
         }
     }
